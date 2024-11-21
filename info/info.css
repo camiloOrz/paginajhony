@@ -1,0 +1,1215 @@
+body {
+    background-image: url(../img/fondo\ azul\ oscuro.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100% 100%;
+
+}
+
+/*Pantalla de carga*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+
+.loader-image {
+    width: 200px;
+    height: auto;
+}
+
+
+#contenido {
+    display: none;
+}
+
+/* animacion de los copos de nieve*/
+
+.snow{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px white);
+}
+
+
+.snow:nth-child(1){
+    opacity: 0.7;
+    transform: translate(50vw, -10px);
+    animation: fall-1 25s linear infinite;
+}
+
+@keyframes fall-1 {
+    35%{
+        transform: translate(60vw, 35vh);
+    }
+    to{
+        transform: translate(40vw, 300vh);
+    }
+}
+
+
+.snow:nth-child(2){
+    opacity: 0.5;
+    transform: translate(20vw, -10px) scale(0.5);
+    animation: fall-2 20s linear infinite;
+}
+
+@keyframes fall-2 {
+    35%{
+        transform: translate(35vw, 45vh)scale(0.5);
+    }
+    to{
+        transform: translate(30vw, 300vh)scale(0.5);
+    }
+}
+
+.snow:nth-child(3){
+    opacity: 0.3;
+    transform: translate(70vw, 35vh) scale(0.2);
+    animation: fall-3 20s linear infinite;
+}
+
+@keyframes fall-3 {
+    35%{
+        transform: translate(60vw, 65vh)scale(0.2);
+    }
+    to{
+        transform: translate(65vw, 300vh)scale(0.2);
+    }
+}
+
+
+.snow:nth-child(4){
+    opacity: 1;
+    transform: translate(90vw, 10vh) scale(0.7);
+    animation: fall-4 20s linear infinite;
+}
+
+@keyframes fall-4 {
+    35%{
+        transform: translate(80vw, 65vh)scale(0.7);
+    }
+    to{
+        transform: translate(85vw, 300vh)scale(0.7);
+    }
+}
+
+
+.snow:nth-child(5){
+    opacity: 0.3;
+    transform: translate(10vw, 20vh) scale(0.7);
+    animation: fall-5 15s linear infinite;
+}
+
+@keyframes fall-5 {
+    35%{
+        transform: translate(30vw, 65vh)scale(0.2);
+    }
+    to{
+        transform: translate(5vw, 300vh)scale(0.2);
+    }
+}
+
+
+.snow:nth-child(6){
+    opacity: 0.6;
+    transform: translate(10vw, 50vh) scale(0.6);
+    animation: fall-6 17s linear infinite;
+}
+
+@keyframes fall-6 {
+    35%{
+        transform: translate(25vw, 65vh)scale(0.6);
+    }
+    to{
+        transform: translate(15vw, 300vh)scale(0.6);
+    }
+}
+
+
+.snow:nth-child(7){
+    opacity: 0.8;
+    transform: translate(15vw, -10vh) scale(0.5);
+    animation: fall-7 16s linear infinite;
+}
+
+@keyframes fall-7 {
+    35%{
+        transform: translate(30vw, 65vh)scale(0.5);
+    }
+    to{
+        transform: translate(5vw, 300vh)scale(0.5);
+    }
+}
+
+
+
+.snow:nth-child(8){
+    opacity: 1;
+    transform: translate(65vw, -10vh) scale(0.9);
+    animation: fall-8 20s linear infinite;
+}
+
+@keyframes fall-8 {
+    35%{
+        transform: translate(40vw, 95vh)scale(0.9);
+    }
+    to{
+        transform: translate(50vw, 300vh)scale(0.9);
+    }
+}
+
+
+.snow:nth-child(9){
+    opacity: 0.4;
+    transform: translate(95vw, -10vh) scale(0.5);
+    animation: fall-9 19s linear infinite;
+}
+
+@keyframes fall-9 {
+    35%{
+        transform: translate(30vw, 50vh)scale(0.5);
+    }
+    to{
+        transform: translate(90vw, 300vh)scale(0.5);
+    }
+}
+
+.snow:nth-child(10){
+    opacity: 0.7;
+    transform: translate(75vw, -10vh) scale(0.6);
+    animation: fall-10 15s linear infinite;
+}
+
+@keyframes fall-10 {
+    35%{
+        transform: translate(80vw, 35vh)scale(0.6);
+    }
+    to{
+        transform: translate(60vw, 300vh)scale(0.7);
+    }
+}
+
+/* Titulo imagen */
+.imgti {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Opcional: agrega un margen superior si deseas espacio arriba */
+    z-index: 11;
+
+}
+
+img {
+    max-width: 100%; /* Asegura que la imagen se ajuste bien en pantallas pequeñas */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+.paja{
+position: absolute;
+top: -5px;
+left: 0px;
+height: 110%;
+width: 150% !important;
+border-radius: 0%;
+}
+
+/*Simbolo izquierda*/
+.simbez {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    position: absolute; /* Posiciona la imagen de forma absoluta */
+    top: 10px; /* Ajusta la distancia desde la parte superior de la página */
+    right: 10px; /* Ajusta la distancia desde el lado derecho de la página */
+}
+
+/* Encabezado y menú */
+
+.menu-horizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0; 
+    z-index: 100;
+}
+
+
+.hamburger {
+    position: absolute;
+    left: 0; 
+    top: 0;
+    z-index: 101;
+}
+
+.hamburger > a {
+    font-size: 30px; 
+    padding: 10px 20px; 
+}
+
+
+.menu-horizontal > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu-horizontal > li:hover {
+    background-color:#eeeecc09;
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px;
+    font-size: 15px;
+    z-index: 102;
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+
+.menu-vertical li:hover {
+    background-color: black;
+}
+
+.menu-vertical li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 15px 15px 20px;
+}
+
+
+
+/* seccion de que es */
+.letter1 {
+    position: absolute;
+    top: 110%; /* Usa % para que sea proporcional al contenedor */
+    width: 100%;
+    font-size: 4vw; /* Escala el tamaño del texto según el ancho de la pantalla */
+    color: wheat;
+    text-align: left;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 0;
+    z-index: 9;
+    margin-left: 5%; /* Proporcional para adaptarse en diferentes dispositivos */
+    font-family: "Arima", system-ui;
+    font-weight: 700;
+    transition: color 0.3s ease; /* Añade una transición suave */
+}
+
+.letter1:hover {
+    color: #ecab42; /* Cambia el color a tu preferencia */
+}
+
+/* Consultas de medios para ajustar el diseño */
+@media (max-width: 768px) {
+    .letter1 {
+        font-size: 6vw; /* Ajusta el tamaño para pantallas más pequeñas */
+        top: 15%;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter1 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.text1 {
+    position: absolute;
+    top: 135%; /* Ajusta la posición vertical proporcionalmente */
+    width: 90%; /* Ocupa el 90% del contenedor */
+    font-size: 1vw; /* Usa una unidad relativa para el tamaño del texto */
+    color: wheat;
+    text-align: justify;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 5%;
+    z-index: 9;
+    margin-left: -3%; /* Proporcional para adaptarse en diferentes dispositivos */
+    max-width: 600px; /* Define un ancho máximo para texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 5%;
+}
+/* Consultas de medios */
+@media (max-width: 768px) {
+    .text1 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text1 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+
+.rata1{
+    position: absolute;
+    top: 172%; /* Ajusta la posición vertical proporcionalmente */
+    width: 90%; /* Ocupa el 90% del contenedor */
+    font-size: 1vw; /* Usa una unidad relativa para el tamaño del texto */
+    color: wheat;
+    text-align: justify;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 5%;
+    z-index: 9;
+    margin-left: -3%; /* Proporcional para adaptarse en diferentes dispositivos */
+    max-width: 600px; /* Define un ancho máximo para texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 5%;
+}
+
+@media (max-width: 768px) {
+    .rata1 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .rata1 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+
+.imgt1 {
+    position: absolute;
+    top: 130%; /* Posiciona la imagen en relación al contenedor */
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    max-width: 600px; /* Ancho máximo para evitar que se agrande demasiado */
+    float: right; /* Alinea la imagen a la derecha */
+    margin: 0 5% 2% 0; /* Margen derecho y inferior en porcentajes */
+    z-index: 9;
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    left: 50%;
+}
+
+/* Consultas de medios */
+@media (max-width: 768px) {
+    .imgt1 {
+        top: 15%; /* Ajusta la posición superior en tabletas */
+        max-width: 80%; /* Limita el ancho al 80% del contenedor */
+        margin: 0 auto; /* Centra la imagen */
+        float: none; /* Elimina el flotado para centrado */
+    }
+}
+
+@media (max-width: 480px) {
+    .imgt1 {
+        top: 10%; /* Reduce la distancia superior en móviles */
+        max-width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        margin: 0 auto; /* Mantén la imagen centrada */
+        float: none; /* Sin flotado */
+    }
+}
+
+
+/* seccion de historia y tradicion */
+
+.letter2 {
+    position: absolute;
+    top: 210%;
+    width: 100%;
+    font-size: 4vw;
+    color: wheat;
+    text-align: right;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 0;
+    z-index: 9;
+    max-width: 600px;
+    left: 50%;
+    font-family: "Arima", system-ui;
+    font-weight: 700;
+    transition: color 0.3s ease; /* Añade una transición suave */
+}
+
+.letter2:hover {
+    color: lightblue; /* Cambia el color a tu preferencia */
+}
+
+
+/* Consultas de medios para ajustar el diseño */
+@media (max-width: 768px) {
+    .letter2 {
+        font-size: 6vw; /* Ajusta el tamaño para pantallas más pequeñas */
+        top: 15%;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter2 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+
+.text2 {
+    position: absolute;
+    top: 235%;
+    width: 100%;
+    font-size: 1vw;
+    color: wheat;
+    text-align: justify; /* Alinea el texto a la derecha */
+    background-color: none;
+    padding: 5px 0;
+    z-index: 9;
+    max-width: 600px; /* Define el ancho máximo del bloque de texto */
+    margin-left: auto; /* Empuja el texto hacia la derecha */
+    margin-right: 20px; /* Espaciado desde el borde derecho */
+    line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */
+    font-family: "Gabriela", serif; 
+    font-weight: 500;
+    left: 50%;
+}
+
+@media (max-width: 768px) {
+    .text2 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text2 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.image-container {
+    position: absolute;
+    top: 235%;
+    left: 5%;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 5% 2% 0;
+    z-index: 9;
+    display: block;
+    overflow: hidden; /* Para mantener el tamaño del contenedor */
+}
+
+.pict1 {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out; /* Animación suave */
+}
+
+.image-container:hover .pict1 {
+    opacity: 0; /* Oculta la imagen inicial */
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/VELA\ PARTE\ 2\ CON\ LLAMA\ \(1\).png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Animación suave */
+    z-index: 10;
+}
+
+.image-container:hover::after {
+    opacity: 1; /* Muestra la nueva imagen */
+}
+
+
+.pict1 {
+    position: absolute;
+    top: 225%;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 5% 2% 0;
+    z-index: 9;
+    display: block;
+    left: 5%;
+    transition: opacity 0.3s ease-in-out; /* Agrega transición suave */
+}
+
+.text3{
+
+    position: absolute;
+    top: 260%;
+    width: 100%;
+    font-size: 1vw;
+    color: wheat;
+    text-align: justify;
+    background-color: none;
+    padding: 5px 0;
+    z-index: 9;
+    max-width: 600px; /* Define el ancho máximo del bloque de texto */
+    margin-left: auto; /* Empuja el texto hacia la derecha */
+    margin-right: 20px; /* Espaciado desde el borde derecho */
+    line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 50%;
+}
+
+@media (max-width: 768px) {
+    .text3 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text3 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.text4{
+    position: absolute;
+    top: 290%;
+    width: 100%;
+    font-size: 1vw;
+    color: wheat;
+    text-align: justify;
+    background-color: none;
+    padding: 5px 0;
+    z-index: 9;
+    max-width: 600px; /* Define el ancho máximo del bloque de texto */
+    margin-left: auto; /* Empuja el texto hacia la derecha */
+    margin-right: 20px; /* Espaciado desde el borde derecho */
+    line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 50%;
+}
+
+@media (max-width: 768px) {
+    .text4 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text4 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+
+.text5{
+    position: absolute;
+    top: 320%;
+    width: 100%;
+    font-size: 1vw;
+    color: wheat;
+    text-align: justify; /* Alinea el texto a la derecha */
+    background-color: none;
+    padding: 5px 5%;
+    z-index: 9;
+    max-width: 600px; /* Define el ancho máximo del bloque de texto */
+    margin-left: -3%; /* Proporcional para adaptarse en diferentes dispositivos */
+    line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */  
+    
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 5%;;
+}
+
+
+/*seccion de informacion*/
+
+
+.secciones-contain {
+    position: absolute; /* Contenedor relativo para los cuadros absolutos */
+    width: 100%;
+    height: auto; /* Ajusta el alto según el contenido */
+}
+
+/* Estilo de los cuadros */
+.contain {
+    position: absolute; /* Mantén los cuadros en posición absoluta */
+    width: 30%; /* Cada cuadro ocupa el 30% del ancho del contenedor */
+    padding: 2rem;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: background-color 1s ease;
+    font-family: "Gabriela", serif;
+    font-weight: 500; 
+    color: #FFF7D4;
+    text-align: center;
+}
+
+/* Posiciones individuales */
+#historia {
+    top: 1950px;
+    left: 5%;
+}
+
+#actividades {
+    top: 1950px;
+    left: 35%;
+}
+
+#galeria {
+    top: 1950px;
+    left: 65%;
+}
+
+/* Hover */
+.contain:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Agrega un fondo semitransparente */
+}
+
+/* Galería de imágenes */
+.gallery {
+    display: flex;
+    justify-content: center; /* Centra las imágenes dentro del cuadro */
+    align-items: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    border-radius: 20px;
+    border: 2px solid #4a6da9bc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contain {
+        position: static; /* Cambia a estático para apilar los cuadros verticalmente */
+        width: 90%;
+        margin: 20px auto; /* Centra cada cuadro */
+    }
+
+    #historia,
+    #actividades,
+    #galeria {
+        top: auto;
+        left: auto;
+    }
+}
+
+
+/*seccion de que hace especial*/
+
+.letter3 {
+    position: absolute;
+    top: 400%;
+    width: 100%;
+    font-size: 4vw;
+    color: wheat;
+    text-align: right;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 0;
+    z-index: 9;
+    max-width: 600px;
+    left: 50%;
+    font-family: "Arima", system-ui;
+    font-weight: 700;
+    transition: color 0.3s ease; /* Añade una transición suave */
+}
+
+.letter3:hover {
+    color: #ecab42; /* Cambia el color a tu preferencia */
+}
+
+
+@media (max-width: 768px) {
+    .letter3 {
+        font-size: 6vw; /* Ajusta el tamaño para pantallas más pequeñas */
+        top: 15%;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .letter3 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.text6 {
+    position: absolute;
+    top: 435%;
+    width: 100%;
+    font-size: 1vw;
+    color: wheat;
+    text-align: justify; /* Alinea el texto a la derecha */
+    background-color: none;
+    padding: 5px 0;
+    z-index: 9;
+    max-width: 600px; /* Define el ancho máximo del bloque de texto */
+    margin-left: auto; /* Empuja el texto hacia la derecha */
+    margin-right: 20px; /* Espaciado desde el borde derecho */
+    line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */
+    font-family: "Gabriela", serif; 
+    font-weight: 500;
+    left: 50%;
+}
+
+@media (max-width: 768px) {
+    .text6 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text6 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.tos{
+        position: absolute;
+        top: 460%;
+        width: 100%;
+        font-size: 1vw;
+        color: wheat;
+        text-align: justify; /* Alinea el texto a la derecha */
+        background-color: none;
+        padding: 5px 0;
+        z-index: 9;
+        max-width: 600px; /* Define el ancho máximo del bloque de texto */
+        margin-left: auto; /* Empuja el texto hacia la derecha */
+        margin-right: 20px; /* Espaciado desde el borde derecho */
+        line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */
+        font-family: "Gabriela", serif; 
+        font-weight: 500;
+        left: 50%;  
+}
+
+@media (max-width: 768px) {
+    .tos {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tos {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.pict2 {
+    position: absolute;
+    top: 395%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 5% 2% 0; 
+    z-index: 9;
+    display: block; 
+    left: -15%;
+}
+
+@media (max-width: 768px) {
+    .pict2 {
+        top: 15%; /* Ajusta la posición superior en tabletas */
+        max-width: 80%; /* Limita el ancho al 80% del contenedor */
+        margin: 0 auto; /* Centra la imagen */
+        float: none; /* Elimina el flotado para centrado */
+    }
+}
+
+@media (max-width: 480px) {
+    .pict2 {
+        top: 10%; /* Reduce la distancia superior en móviles */
+        max-width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        margin: 0 auto; /* Mantén la imagen centrada */
+        float: none; /* Sin flotado */
+    }
+}
+
+
+.text7 {
+    position: absolute;
+        top: 477%;
+        width: 100%;
+        font-size: 1vw;
+        color: wheat;
+        text-align: justify; /* Alinea el texto a la derecha */
+        background-color: none;
+        padding: 5px 0;
+        z-index: 9;
+        max-width: 600px; /* Define el ancho máximo del bloque de texto */
+        margin-left: auto; /* Empuja el texto hacia la derecha */
+        margin-right: 20px; /* Espaciado desde el borde derecho */
+        line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */
+        font-family: "Gabriela", serif; 
+        font-weight: 500;
+        left: 50%;
+}
+
+@media (max-width: 768px) {
+    .text7 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text7 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+/*seccion de turismo y patrimonio*/
+
+.tit1 {
+    position: absolute;
+    top: 510%; /* Usa % para que sea proporcional al contenedor */
+    width: 100%;
+    font-size: 2.5vw; /* Escala el tamaño del texto según el ancho de la pantalla */
+    color: wheat;
+    text-align: left;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 1%;
+    z-index: 9;
+    max-width: 600px; /* Define el ancho máximo del bloque de texto */
+    margin-left: 5%; /* Proporcional para adaptarse en diferentes dispositivos */
+    font-family: "Arima", system-ui;
+    font-weight: 700;
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.tit1:hover {
+    color: lightblue; /* Cambia el color a tu preferencia */
+}
+
+@media (max-width: 768px) {
+    .tit1 {
+        font-size: 6vw; /* Ajusta el tamaño para pantallas más pequeñas */
+        top: 15%;
+        margin-left: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tit1 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.text8 {
+    position: absolute;
+    top: 535%; /* Ajusta la posición vertical proporcionalmente */
+    width: 90%; /* Ocupa el 90% del contenedor */
+    font-size: 1vw; /* Usa una unidad relativa para el tamaño del texto */
+    color: wheat;
+    text-align: justify;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 5%;
+    z-index: 9;
+    margin-left: -3%; /* Proporcional para adaptarse en diferentes dispositivos */
+    max-width: 600px; /* Define un ancho máximo para texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 5%;
+}
+
+@media (max-width: 768px) {
+    .text8 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text8 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.text9 {
+
+    position: absolute;
+    top: 565%; /* Ajusta la posición vertical proporcionalmente */
+    width: 90%; /* Ocupa el 90% del contenedor */
+    font-size: 1vw; /* Usa una unidad relativa para el tamaño del texto */
+    color: wheat;
+    text-align: justify;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 5%;
+    z-index: 9;
+    margin-left: -3%; /* Proporcional para adaptarse en diferentes dispositivos */
+    max-width: 600px; /* Define un ancho máximo para texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 5%;
+}
+
+@media (max-width: 768px) {
+    .text9 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text9 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.text10{
+    position: absolute;
+    top: 585%; /* Ajusta la posición vertical proporcionalmente */
+    width: 90%; /* Ocupa el 90% del contenedor */
+    font-size: 1vw; /* Usa una unidad relativa para el tamaño del texto */
+    color: wheat;
+    text-align: justify;
+    background-color: transparent; /* Cambiado de none a transparent */
+    padding: 5px 5%;
+    z-index: 9;
+    margin-left: -3%; /* Proporcional para adaptarse en diferentes dispositivos */
+    max-width: 600px; /* Define un ancho máximo para texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+    font-family: "Gabriela", serif;
+    font-weight: 500;
+    left: 5%;
+}
+
+@media (max-width: 768px) {
+    .text10 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .text10 {
+        font-size: 8vw; /* Aumenta el tamaño del texto en pantallas pequeñas */
+        text-align: center; /* Centra el texto en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        top: 10%;
+    }
+}
+
+.pp{
+    position: absolute;
+    top: 540%; /* Posiciona la imagen en relación al contenedor */
+    width: 100%; /* Hace que la imagen ocupe todo el ancho disponible */
+    max-width: 600px; /* Ancho máximo para evitar que se agrande demasiado */
+    float: right; /* Alinea la imagen a la derecha */
+    margin: 0 5% 2% 0; /* Margen derecho y inferior en porcentajes */
+    z-index: 9;
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    left: 55%;
+
+}
+
+@media (max-width: 768px) {
+    .pp {
+        top: 15%;
+        max-width: 80%; 
+        margin: 0 auto; 
+        float: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .pp {
+        top: 10%; /* Reduce la distancia superior en móviles */
+        max-width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        margin: 0 auto; /* Mantén la imagen centrada */
+        float: none; /* Sin flotado */
+    }
+}
+
+/*Donde nos ubicamos*/
+
+.tit2 {
+    position: absolute;
+    top: 630%; /* Ajusta para la posición inicial */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Ajuste para centrar el elemento */
+    font-size: 50px;
+    color: wheat;
+    text-align: center;
+    z-index: 9;
+    max-width: 600px;
+    font-family: "Arima", system-ui;
+    font-weight: 700;
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+}
+
+/* Mapa */
+#map {
+    height: 500px;
+    width: 50%; /* Inicialmente ocupa el 50% del contenedor */
+    position: absolute;
+    top: 680%;
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    max-width: 600px;
+    border-radius: 100px;
+    margin: 0 auto; /* Centra el mapa horizontalmente */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 1024px) {
+    .tit2 {
+        top: -900px; /* Ajusta para pantallas más pequeñas */
+        font-size: 40px; /* Reduce el tamaño del texto */
+        max-width: 500px; /* Ajusta el ancho máximo */
+    }
+
+    #map {
+        top: -700px;
+        height: 400px; /* Reduce la altura */
+        width: 70%; /* Aumenta el ancho relativo al contenedor */
+    }
+}
+
+@media (max-width: 768px) {
+    .tit2 {
+        top: -600px;
+        font-size: 30px; /* Ajusta el tamaño del texto */
+        max-width: 90%; /* Ajusta el ancho máximo al 90% del contenedor */
+    }
+
+    #map {
+        top: -500px;
+        height: 300px; /* Reduce aún más la altura */
+        width: 90%; /* El mapa ocupa casi todo el ancho del contenedor */
+    }
+}
+
+@media (max-width: 480px) {
+    .tit2 {
+        top: -400px;
+        font-size: 25px; /* Texto más pequeño para pantallas móviles */
+        max-width: 90%; /* Se adapta mejor a pantallas estrechas */
+    }
+
+    #map {
+        top: -300px;
+        height: 250px; /* Altura más reducida */
+        width: 100%; /* Mapa ocupa todo el ancho */
+    }
+}
+
+/* Imagen principal */
+
+.vene{
+    position: absolute;
+    top: -5px;
+    width: 450%;
+    height: 350%;
+    font-size: 17px;
+    text-align: left; /* Alinea el texto a la izquierda */
+   background-color: none;
+    padding: 5px 0;
+    z-index: 9;
+    max-width: 100%; /* Ajusta el ancho de la imagen */
+    margin-left: -10px; /* Alinea la imagen a la izquierda */
+    line-height: 1.6; /* Mejora la legibilidad con un espaciado entre líneas */
+   padding-left: 0; /* Asegúrate de que no haya padding innecesario */
+   border-radius: 0%;
+    z-index: 2;
+}
